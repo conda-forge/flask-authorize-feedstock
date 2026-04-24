@@ -7,23 +7,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/f/flask-authorize/Flask-Authorize-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/f/flask-authorize/Flask-Authorize-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.3
+    - python {{ python_min }}
     - setuptools
   run:
     - flask
     - flask-sqlalchemy
-    - python >=3.3
+    - python >={{ python_min }}
     - six
     - sqlalchemy
 
@@ -34,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/bprinty/Flask-Authorize
