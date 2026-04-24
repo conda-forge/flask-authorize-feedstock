@@ -1,6 +1,6 @@
 {% set name = "flask-authorize" %}
-{% set version = "0.2.6" %}
-{% set sha256 = "b3d905552ed69d97131cfcaa62609c6b04440ff6a1da6a0397f0867dea7001c6" %}
+{% set version = "0.2.7" %}
+{% set sha256 = "b53fb2d7f78b8a9727937302de0f1917cbceab1978a4c20f1b556d76c6671dd5" %}
 
 package:
   name: {{ name|lower }}
